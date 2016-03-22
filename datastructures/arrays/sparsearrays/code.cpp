@@ -1,0 +1,31 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int n, q;
+    cin>>n;    
+    vector<string> test(n);
+    for(int i=0;i<n;++i){
+        cin>>test[i];
+    }
+    
+    cin>>q;
+    for(int i=0;i<q;++i){
+        string query;
+        int count = 0;
+        cin>>query;
+        for(int j=0;j<n;++j){
+            if(!query.compare(test[j])){
+                ++count;
+            }            
+        }
+        cout<<count<<endl;
+    }
+    return 0;
+}
